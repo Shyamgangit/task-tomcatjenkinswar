@@ -1,0 +1,11 @@
+=========>docker image pull tomcat:latest
+=========>docker image ls 
+=========>docker container create --publish 8082:8080 --name my-tomcat-container tomcat:latest
+=========>docker container ls -a
+=========>docker container start my-tomcat-container =======>wget https://updates.jenkins-ci.org/download/war/2.255/jenkins.war  #to get the jenkins war file;  
+vi Dockerfile #which is in the dockerfile repo;
+  198  docker build .
+  199  docker images
+  218  docker build -t newtomcat:1 .
+  219  docker run --name mytomcat -p 8085:8080 -d newtomcat:1
+  220  curl localhost:8085/jenkins
